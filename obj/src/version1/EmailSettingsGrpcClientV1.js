@@ -32,14 +32,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_settings_by_ids', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettingsList(response.getSettingsList()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -52,14 +50,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_settings_by_id', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -72,14 +68,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_settings_by_email', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -92,14 +86,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('set_settings', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -112,14 +104,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('set_verified_settings', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -135,14 +125,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('set_recipient', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -156,14 +144,12 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('set_subscriptions', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -176,13 +162,11 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('delete_settings_by_id', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -195,13 +179,11 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('resend_verification', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -215,13 +197,11 @@ class EmailSettingsGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('verify_email', correlationId, request);
                 if (response.error != null)
                     throw EmailSettingsGrpcConverterV1_1.EmailSettingsGrpcConverterV1.toError(response.error);
+                timing.endTiming();
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

@@ -9,12 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EmailSettingsCommandableGrpcClientV1 = void 0;
+exports.EmailSettingsCommandableLambdaClientV1 = void 0;
 const pip_services3_commons_nodex_1 = require("pip-services3-commons-nodex");
-const pip_services3_grpc_nodex_1 = require("pip-services3-grpc-nodex");
-class EmailSettingsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.CommandableGrpcClient {
+const pip_services3_aws_nodex_1 = require("pip-services3-aws-nodex");
+class EmailSettingsCommandableLambdaClientV1 extends pip_services3_aws_nodex_1.CommandableLambdaClient {
     constructor(config) {
-        super('v1/email_settings');
+        super('email_settings');
         let thisConfig = pip_services3_commons_nodex_1.ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');
         if (config != null)
@@ -96,5 +96,5 @@ class EmailSettingsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.Co
         });
     }
 }
-exports.EmailSettingsCommandableGrpcClientV1 = EmailSettingsCommandableGrpcClientV1;
-//# sourceMappingURL=EmailSettingsCommandableGrpcClientV1.js.map
+exports.EmailSettingsCommandableLambdaClientV1 = EmailSettingsCommandableLambdaClientV1;
+//# sourceMappingURL=EmailSettingsCommandableLambdaClientV1.js.map

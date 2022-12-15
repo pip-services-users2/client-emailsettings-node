@@ -32,12 +32,11 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettingsList(response.getSettingsList()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -53,13 +52,12 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
 
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
-
+            
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -76,12 +74,11 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -98,12 +95,11 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -120,12 +116,11 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -144,13 +139,12 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
 
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
-
+            
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -167,12 +161,11 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? EmailSettingsGrpcConverterV1.toEmailSettings(response.getSettings()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -187,12 +180,10 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
 
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
-
+            timing.endTiming();
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -207,12 +198,10 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
 
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
-
+            timing.endTiming();
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
   
@@ -228,12 +217,10 @@ export class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSetti
 
             if (response.error != null)
                 throw EmailSettingsGrpcConverterV1.toError(response.error);
-
+            timing.endTiming();
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 

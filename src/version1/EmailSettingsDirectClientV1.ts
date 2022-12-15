@@ -23,12 +23,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.get_settings_by_ids');
         
         try {
-            return await this._controller.getSettingsByIds(correlationId, recipientIds);
+            let res = await this._controller.getSettingsByIds(correlationId, recipientIds);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -36,12 +36,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.get_settings_by_id');
 
         try {
-            return await this._controller.getSettingsById(correlationId, recipientId);
+            let res = await this._controller.getSettingsById(correlationId, recipientId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -49,12 +49,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.get_settings_by_email');
         
         try {
-            return await this._controller.getSettingsByEmail(correlationId, email);
+            let res = await this._controller.getSettingsByEmail(correlationId, email);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -62,12 +62,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.set_settings');
         
         try {
-            return await this._controller.setSettings(correlationId, settings);
+            let res = await this._controller.setSettings(correlationId, settings);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -75,12 +75,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.set_verified_settings');
         
         try {
-            return await this._controller.setVerifiedSettings(correlationId, settings);
+            let res = await this._controller.setVerifiedSettings(correlationId, settings);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -89,12 +89,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.set_recipient');
 
         try {
-            return await this._controller.setRecipient(correlationId, recipientId, name, email, language);
+            let res = await this._controller.setRecipient(correlationId, recipientId, name, email, language);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -102,12 +102,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.set_subscriptions');
         
         try {
-            return await this._controller.setSubscriptions(correlationId, recipientId, subscriptions);
+            let res = await this._controller.setSubscriptions(correlationId, recipientId, subscriptions);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -115,12 +115,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.delete_settings_by_id');
         
         try {
-            return await this._controller.deleteSettingsById(correlationId, recipientId);
+            let res = await this._controller.deleteSettingsById(correlationId, recipientId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -128,12 +128,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.resend_verification');
         
         try {
-            return await this._controller.resendVerification(correlationId, recipientId);
+            let res = await this._controller.resendVerification(correlationId, recipientId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -141,12 +141,12 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         let timing = this.instrument(correlationId, 'email_settings.verify_email');
         
         try {
-            return await this._controller.verifyEmail(correlationId, recipientId, code);
+            let res = await this._controller.verifyEmail(correlationId, recipientId, code);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 

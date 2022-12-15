@@ -1,14 +1,14 @@
 import { ConfigParams } from 'pip-services3-commons-nodex';
-import { CommandableGrpcClient } from 'pip-services3-grpc-nodex';
+import { CommandableLambdaClient } from 'pip-services3-aws-nodex';
 
 import { EmailSettingsV1 } from './EmailSettingsV1';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 
-export class EmailSettingsCommandableGrpcClientV1 extends CommandableGrpcClient implements IEmailSettingsClientV1 {
+export class EmailSettingsCommandableLambdaClientV1 extends CommandableLambdaClient implements IEmailSettingsClientV1 {
     private _defaultParameters: ConfigParams;
 
     constructor(config?: any) {
-        super('v1/email_settings');
+        super('email_settings');
 
         let thisConfig = ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');

@@ -27,14 +27,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.get_settings_by_ids');
             try {
-                return yield this._controller.getSettingsByIds(correlationId, recipientIds);
+                let res = yield this._controller.getSettingsByIds(correlationId, recipientIds);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -42,14 +41,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.get_settings_by_id');
             try {
-                return yield this._controller.getSettingsById(correlationId, recipientId);
+                let res = yield this._controller.getSettingsById(correlationId, recipientId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -57,14 +55,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.get_settings_by_email');
             try {
-                return yield this._controller.getSettingsByEmail(correlationId, email);
+                let res = yield this._controller.getSettingsByEmail(correlationId, email);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -72,14 +69,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.set_settings');
             try {
-                return yield this._controller.setSettings(correlationId, settings);
+                let res = yield this._controller.setSettings(correlationId, settings);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -87,14 +83,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.set_verified_settings');
             try {
-                return yield this._controller.setVerifiedSettings(correlationId, settings);
+                let res = yield this._controller.setVerifiedSettings(correlationId, settings);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -102,14 +97,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.set_recipient');
             try {
-                return yield this._controller.setRecipient(correlationId, recipientId, name, email, language);
+                let res = yield this._controller.setRecipient(correlationId, recipientId, name, email, language);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -117,14 +111,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.set_subscriptions');
             try {
-                return yield this._controller.setSubscriptions(correlationId, recipientId, subscriptions);
+                let res = yield this._controller.setSubscriptions(correlationId, recipientId, subscriptions);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -132,14 +125,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.delete_settings_by_id');
             try {
-                return yield this._controller.deleteSettingsById(correlationId, recipientId);
+                let res = yield this._controller.deleteSettingsById(correlationId, recipientId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -147,14 +139,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.resend_verification');
             try {
-                return yield this._controller.resendVerification(correlationId, recipientId);
+                let res = yield this._controller.resendVerification(correlationId, recipientId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -162,14 +153,13 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'email_settings.verify_email');
             try {
-                return yield this._controller.verifyEmail(correlationId, recipientId, code);
+                let res = yield this._controller.verifyEmail(correlationId, recipientId, code);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

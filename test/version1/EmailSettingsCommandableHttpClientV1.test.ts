@@ -6,9 +6,9 @@ import { ConsoleLogger } from 'pip-services3-components-nodex';
 import { EmailNullClientV1 } from 'client-email-node';
 import { EmailSettingsMemoryPersistence } from 'service-emailsettings-node';
 import { EmailSettingsController } from 'service-emailsettings-node';
-import { EmailSettingsHttpServiceV1 } from 'service-emailsettings-node';
+import { EmailSettingsCommandableHttpServiceV1 } from 'service-emailsettings-node';
 
-import { EmailSettingsHttpClientV1 } from '../../src/version1/EmailSettingsHttpClientV1';
+import { EmailSettingsCommandableHttpClientV1 } from '../../src/version1/EmailSettingsCommandableHttpClientV1';
 import { EmailSettingsClientFixtureV1 } from './EmailSettingsClientFixtureV1';
 
 var httpConfig = ConfigParams.fromTuples(
@@ -17,9 +17,9 @@ var httpConfig = ConfigParams.fromTuples(
     "connection.port", 3000
 );
 
-suite('EmailSettingsHttpClientV1', ()=> {
-    let service: EmailSettingsHttpServiceV1;
-    let client: EmailSettingsHttpClientV1;
+suite('EmailSettingsCommandableHttpClientV1', ()=> {
+    let service: EmailSettingsCommandableHttpServiceV1;
+    let client: EmailSettingsCommandableHttpClientV1;
     let fixture: EmailSettingsClientFixtureV1;
 
     suiteSetup(async () => {
@@ -28,20 +28,20 @@ suite('EmailSettingsHttpClientV1', ()=> {
         let controller = new EmailSettingsController();
         controller.configure(new ConfigParams());
 
-        service = new EmailSettingsHttpServiceV1();
+        service = new EmailSettingsCommandableHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
             new Descriptor('pip-services', 'logger', 'console', 'default', '1.0'), logger,
             new Descriptor('service-emailsettings', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('service-emailsettings', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('service-emailsettings', 'service', 'http', 'default', '1.0'), service,
+            new Descriptor('service-emailsettings', 'service', 'commandable-http', 'default', '1.0'), service,
             new Descriptor('service-email', 'client', 'null', 'default', '1.0'), new EmailNullClientV1()
         );
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new EmailSettingsHttpClientV1();
+        client = new EmailSettingsCommandableHttpClientV1();
         client.setReferences(references);
         client.configure(httpConfig);
 

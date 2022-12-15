@@ -9,10 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EmailSettingsCommandableGrpcClientV1 = void 0;
+exports.EmailSettingsCommandableHttpClientV1 = void 0;
 const pip_services3_commons_nodex_1 = require("pip-services3-commons-nodex");
-const pip_services3_grpc_nodex_1 = require("pip-services3-grpc-nodex");
-class EmailSettingsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.CommandableGrpcClient {
+const pip_services3_rpc_nodex_1 = require("pip-services3-rpc-nodex");
+class EmailSettingsCommandableHttpClientV1 extends pip_services3_rpc_nodex_1.CommandableHttpClient {
     constructor(config) {
         super('v1/email_settings');
         let thisConfig = pip_services3_commons_nodex_1.ConfigParams.fromValue(config);
@@ -96,5 +96,5 @@ class EmailSettingsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.Co
         });
     }
 }
-exports.EmailSettingsCommandableGrpcClientV1 = EmailSettingsCommandableGrpcClientV1;
-//# sourceMappingURL=EmailSettingsCommandableGrpcClientV1.js.map
+exports.EmailSettingsCommandableHttpClientV1 = EmailSettingsCommandableHttpClientV1;
+//# sourceMappingURL=EmailSettingsCommandableHttpClientV1.js.map
