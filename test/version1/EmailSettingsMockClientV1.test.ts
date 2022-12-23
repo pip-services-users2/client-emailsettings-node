@@ -1,12 +1,12 @@
-import { EmailSettingsMemoryClientV1 } from '../../src/version1/EmailSettingsMemoryClientV1';
+import { EmailSettingsMockClientV1 } from '../../src/version1/EmailSettingsMockClientV1';
 import { EmailSettingsClientFixtureV1 } from './EmailSettingsClientFixtureV1';
 
-suite('EmailSettingsMemoryClientV1', ()=> {
-    let client: EmailSettingsMemoryClientV1;
+suite('EmailSettingsMockClientV1', ()=> {
+    let client: EmailSettingsMockClientV1;
     let fixture: EmailSettingsClientFixtureV1;
 
     suiteSetup(() => {
-        client = new EmailSettingsMemoryClientV1();
+        client = new EmailSettingsMockClientV1();
 
         fixture = new EmailSettingsClientFixtureV1(client);
     });

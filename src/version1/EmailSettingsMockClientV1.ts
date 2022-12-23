@@ -1,7 +1,7 @@
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 import { EmailSettingsV1 } from './EmailSettingsV1';
 
-export class EmailSettingsMemoryClientV1 implements IEmailSettingsClientV1 {
+export class EmailSettingsMockClientV1 implements IEmailSettingsClientV1 {
     private _settings: EmailSettingsV1[] = [];
 
     public async getSettingsByIds(correlationId: string, recipientIds: string[]): Promise<EmailSettingsV1[]> {

@@ -5,6 +5,6 @@ export { EmailSettingsCommandableHttpClientV1 } from './EmailSettingsCommandable
 export { EmailSettingsCommandableLambdaClientV1 } from './EmailSettingsCommandableLambdaClientV1';
 export { EmailSettingsDirectClientV1 } from './EmailSettingsDirectClientV1';
 export { EmailSettingsNullClientV1 } from './EmailSettingsNullClientV1';
-export { EmailSettingsMemoryClientV1 } from './EmailSettingsMemoryClientV1';
+export { EmailSettingsMockClientV1 } from './EmailSettingsMockClientV1';
 export { EmailSettingsCommandableGrpcClientV1 } from './EmailSettingsCommandableGrpcClientV1';
 export { EmailSettingsGrpcClientV1 } from './EmailSettingsGrpcClientV1';

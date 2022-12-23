@@ -3,7 +3,7 @@ import { Factory } from 'pip-services3-components-nodex';
 export declare class EmailSettingsClientFactory extends Factory {
     static Descriptor: Descriptor;
     static NullClientV1Descriptor: Descriptor;
-    static MemoryClientV1Descriptor: Descriptor;
+    static MockClientV1Descriptor: Descriptor;
     static DirectClientV1Descriptor: Descriptor;
     static CmdHttpClientV1Descriptor: Descriptor;
     static CmdLambdaClientV1Descriptor: Descriptor;
